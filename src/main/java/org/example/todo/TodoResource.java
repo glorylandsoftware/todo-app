@@ -24,6 +24,12 @@ public class TodoResource {
         return repository.findAll();
     }
 
+    @GET
+    @Path("/echo")
+    public String echo(){
+        return "welcome to todo app";
+    }
+
     @POST
     @Transactional
     public Todo create(Todo todo) {
