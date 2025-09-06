@@ -24,6 +24,12 @@ public class TodoResource {
         return repository.findAll();
     }
 
+    @GET
+    @Path("health")
+    public String health(){
+        return "health endpoint 2";
+    }
+
     @POST
     @Transactional
     public Todo create(Todo todo) {
